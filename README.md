@@ -28,6 +28,14 @@ This mechanism leverages the "fear of losing money" as a strong motivation to he
 
 Pausify is designed for everyone who faces challenges with excessive mobile phone use, with a special focus on **teenagers and young adults** who wish to "pause" their screen time and invest in their personal development.
 
+## 🎨 Design
+
+The application was designed with a **simple and minimalist interface** in mind.
+* **Fonts:** The 'Monda' font is used for general text, and 'Raleway' for the logo.
+* **Colors:** The primary color palette consists of **white, black, and purple gradients**.
+
+You can explore the prototype of the application design here: [Purify Figma Prototype](https://www.figma.com/proto/SaZIOrFftZdfg2i7M8umPA/Purify?node-id=0-1&t=Bmi5SrxsjgrqJw6w-1)
+
 ## ⚙️ Tech Stack
 
 Pausify will be developed using the following technologies:
