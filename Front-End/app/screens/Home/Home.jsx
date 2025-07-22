@@ -1,4 +1,5 @@
 import { View, Text, Image, StyleSheet, Dimensions, StatusBar} from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import Logo from '../../../assets/images/PausifyLogoWithoutBG.png'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
@@ -9,9 +10,10 @@ const windowW = Dimensions.get('window').width
 const windowH = Dimensions.get('window').height
 
 export default function Home( { navigation } ) {
+
   return (
     <SafeArea>
-        <View style = {{flex: 1, borderWidth: 1, borderColor: 'red'}}>
+        <View style = {{flex: 1}}>
                 <View style = {styles.logoContainer}>
                     <Image source = {Logo} style = {styles.logoImage} />
                     <Text style = {styles.appName}>PAUSIFY</Text>
@@ -19,7 +21,7 @@ export default function Home( { navigation } ) {
                 <View style = {styles.goalContainer}>
                     <View style = {styles.goalContainerBackGround}></View>
                     <GoalDisplay/>
-                    <Button image = {gearSymbol}></Button>
+                    <Button image = {gearSymbol} destinationScreen = 'SucessScreen' sucessMenssage = {'meta criada com \n sucesso'}></Button>
                 </View>
                 <Footer/>
         </View>

@@ -1,9 +1,12 @@
 import { Text, View, Image, StyleSheet, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react'
 import gearSymbol from '../../assets/images/GearSymbol.png'
 
 export default function Button(props){
+
+    const nav = useNavigation()
 
     const ButtonStates = {
             buttonUnpressured: {
@@ -56,7 +59,13 @@ export default function Button(props){
     const [textState, setTextState] = useState(buttonTextStates.buttonUppressured)
     const [imageState, setImageState] = useState(buttonImageStates.buttonUnpressured)
 
+    // Issue 1
+    // Arrumar Delay entre pressionar o botão, animar o botão e navegar para outra tela
+
     function handleSetButtonState(){
+        const f = () => nav.navigate(props.destinationScreen, {Menssage: props.sucessMenssage})
+        f()
+
         setButtonState(ButtonStates.buttonPressed)
         setTextState(buttonTextStates.buttonPressed)
         setImageState(buttonImageStates.buttonPressed)
