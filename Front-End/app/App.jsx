@@ -8,6 +8,10 @@ import Help from './screens/Help/Help'
 import Login from './screens/Login/Login'
 import SignIn from './screens/SignIn/SignIn'
 import SucessScreen from './screens/SucessScreen/SucessScreen'
+import Goals from './screens/Goals/Goals'
+import NewGoal from './screens/NewGoal/NewGoal'
+import ConfirmationScreen from './screens/ConfirmationScreen/ConfirmationScreen'
+import Payment from './screens/Payment/Payment'
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +49,22 @@ export default function App() {
         <Stack.Screen 
           name = 'SucessScreen'
           component = {SucessScreen}
+        />
+        <Stack.Screen 
+          name = 'Goals'
+          component = {Goals}
+        />
+        <Stack.Screen 
+          name = 'NewGoal'
+          component = {NewGoal}
+        />
+        <Stack.Screen 
+          name = 'ConfirmationScreen'
+          component = {ConfirmationScreen}
+        />
+        <Stack.Screen 
+          name = 'Payment'
+          component = {Payment}
         />
       </Stack.Navigator>
     </NavigationContainer>

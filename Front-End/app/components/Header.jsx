@@ -13,7 +13,7 @@ export default function Header(props){
             <Image style = {{position: 'absolute', width: '100%', height: '48%'}} source = {BackSymbol} />
         </TouchableOpacity>
         <View style = {{position: 'absolute'}}>
-            <Text style = {{color: 'white', textAlign: 'center', fontWeight: 'bold', fontSize: 26, width: '100%', right: '11%'}}>{props.pageName}</Text>
+            <Text style = {{color: 'white', textAlign: 'center', fontWeight: 'bold', fontSize: 26, width: '100%'}}>{props.pageName}</Text>
         </View>
       </View>
     )

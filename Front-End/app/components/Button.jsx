@@ -16,7 +16,7 @@ export default function Button(props){
             justifyContent: 'center',
             alignItems: 'center',
             width: 250,
-            height: '12%',
+            height: 60,
         },  
             buttonPressed: {
             display: 'flex',
@@ -83,7 +83,7 @@ export default function Button(props){
                 locations = {[0, 0.93]}
         />
         <Image style = {imageState} source  = {props.image}/>
-        <Text style = {textState}>Gerenciar Metas</Text>
+        <Text style = {textState}>{props.text}</Text>
       </View>
     )
 }
