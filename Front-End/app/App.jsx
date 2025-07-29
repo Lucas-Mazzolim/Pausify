@@ -12,6 +12,10 @@ import Goals from './screens/Goals/Goals'
 import NewGoal from './screens/NewGoal/NewGoal'
 import ConfirmationScreen from './screens/ConfirmationScreen/ConfirmationScreen'
 import Payment from './screens/Payment/Payment'
+import UserData from './screens/UserData/UserData'
+import Email from './screens/RecoverPassWord/Email'
+import CodeInput from './screens/RecoverPassWord/CodeInput'
+import PassWordChange from './screens/RecoverPassWord/PasswordChange'
 
 const Stack = createNativeStackNavigator();
 
@@ -65,6 +69,22 @@ export default function App() {
         <Stack.Screen 
           name = 'Payment'
           component = {Payment}
+        />
+        <Stack.Screen 
+          name = 'UserData'
+          component = {UserData}
+        />
+        <Stack.Screen 
+          name = 'Email'
+          component = {Email}
+        />
+        <Stack.Screen 
+          name = 'CodeInput'
+          component = {CodeInput}
+        />
+        <Stack.Screen 
+          name = 'PasswordChange'
+          component = {PassWordChange}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -5,6 +5,7 @@ const windowW = Dimensions.get('window').width
 const windowH = Dimensions.get('window').height
 const navigationBarHeight = Dimensions.get('screen').height - windowH
 
+// Ensure the content is displayed where it should be displayed
 export default function SafeArea(props){
     return(
         <View style = {{flex: 1, marginTop: StatusBar.currentHeight, marginBottom: navigationBarHeight - windowW/12}}>

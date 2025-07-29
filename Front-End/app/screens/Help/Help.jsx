@@ -17,7 +17,7 @@ export default function Help(){
         </ScrollView>      
       </SafeArea>
     )
-} 
+  }
 
 function HelpSection( props ){
   return(

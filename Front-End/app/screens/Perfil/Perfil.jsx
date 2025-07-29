@@ -3,12 +3,14 @@ import { useNavigation } from '@react-navigation/native'
 import Footer from '../../components/Footer'
 import SafeArea from '../../components/SafeArea'
 import UndefinedUser from '../../../assets/images/UndefinedUser.png'
+import * as Clipboard from 'expo-clipboard';
 import HelpSymbol from '../../../assets/images/HelpSymbol.png'
 import ShareSymbol from '../../../assets/images/ShareSymbol.png'
 import ThemeSymbol from '../../../assets/images/ThemeSymbol.png'
 import RightArrow from '../../../assets/images/RightArrow.png'
+import DataBase from '../../../assets/images/DataBase.png'
 
-export default function Perfil( { navigation }){
+export default function Perfil( { navigation } ){
     return (
       <SafeArea>
         <View style = {{flex: 1}}>
@@ -16,9 +18,9 @@ export default function Perfil( { navigation }){
             <Image style = {{marginLeft: '5%', width: '15%', height: '60%'}} source = {UndefinedUser}/>
             <Text style = {{color: 'white', fontSize: 20}}>Usuário Anônimo</Text>
           </View>
-          <View style = {styles.profileOptions}>
+          <View style = {styles.profileOptions}> 
             <OptionContainer  optionImage = {ThemeSymbol} optionName = {'Tema'} pageName = 'Thema' />
-            <OptionContainer optionImage = {ShareSymbol} optionName = {'Compartilhar'} pageName = 'Thema' />
+            <OptionContainer optionImage = {ShareSymbol} optionName = {'Compartilhar'} pageName = '' />
             <OptionContainer optionImage = {HelpSymbol} optionName = {'Ajuda'} pageName = 'Help' />
             <View style = {{flex: 20}}>
               {/* div tha occupies the blank space */}
@@ -34,12 +36,18 @@ function OptionContainer(props){
 
   const nav = useNavigation()
 
-  console.log(props.pageName)
-  console.log(props.optionImage)
-  console.log(props.optionName)
+  function navigation(pageName){
+    if(pageName == ''){
+      // Clipboard.
+      Clipboard.setStringAsync('Pausify é um aplicativo incrível que te ajuda a passar menos tempo no celular! \n\n baixe ele nesse link: #');
+    } else{
+      let n = () => nav.navigate(pageName)
+      n()
+    }
+  }
 
   return(
-    <View style = {styles.profileOption} onTouchStart = {() => nav.navigate(props.pageName)}>
+    <View style = {styles.profileOption} onTouchStart = {() => navigation(props.pageName)}>
       <View style = {styles.profileOptionLeft}>
         <Image style = {{marginLeft: '5%', width: '12%', height: '43%'}} source = {props.optionImage} />
         <Text style = {{color: 'white', fontSize: 24, fontWeight: 500}}>{props.optionName}</Text>
