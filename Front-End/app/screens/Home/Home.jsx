@@ -21,7 +21,7 @@ export default function Home( { navigation } ) {
                 <View style = {styles.goalContainer}>
                     <View style = {styles.goalContainerBackGround}></View>
                     <GoalDisplay/>
-                    <Button image = {gearSymbol} destinationScreen = 'Login' text = 'Gerenciar Metas'></Button>
+                    <Button image = {gearSymbol} destinationScreen = 'Goals' text = 'Gerenciar Metas'></Button>
                 </View>
                 <Footer/>
         </View>
